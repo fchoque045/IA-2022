@@ -1,4 +1,4 @@
-function [x0,mu0,mumod] = punto5(x0,mu0,adv1,adv2,adv3)
+function [x0,mu0,mumod] = punto6(x0,mu0,adv1,adv2,adv3)
     if size(x0)==size(mu0)
         if min(mu0) < 0 || max(mu0) > 1
             error('los valores de mu deben estar en el intervalo 0,1')
