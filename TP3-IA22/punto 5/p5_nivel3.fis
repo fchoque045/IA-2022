@@ -1,0 +1,32 @@
+[System]
+Name='p5-nivel2'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='jabon'
+Range=[0 500]
+NumMFs=3
+MF1='normal':'gaussmf',[45 250]
+MF2='mucha':'smf',[300 410]
+MF3='escasa':'zmf',[100 200]
+
+[Output1]
+Name='CicloDeLavado'
+Range=[0 150]
+NumMFs=2
+MF1='largo':'trapmf',[60 100 150 150]
+MF2='corto':'trapmf',[0 0 50 90]
+
+[Rules]
+1, 2 (1) : 2
+3, 2 (1) : 2
+2, 1 (1) : 2
